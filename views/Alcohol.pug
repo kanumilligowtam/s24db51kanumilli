@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  - var results = [{Alcohol_type: "Whisky", brand: "Oldmonk", price: 30},{Alcohol_type: "Rum", brand: "Bacardi", price: 20},{Alcohol_type: "Vodka", brand: "Abolute", price: 220}]
+
+  .container-fluid
+    .row
+      each f,index in results 
+        .col-sm-2(onclick=`buy(${index})`)
+          | #{f.Alcohol_type}, #{f.brand}, $#{f.price}
+          
+  script.
+    function buy(index) {
+      alert(`You purchased Item: ${index+1}`);
+    }
