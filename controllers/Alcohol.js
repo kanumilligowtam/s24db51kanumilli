@@ -1,4 +1,4 @@
-var Alcohol= require('../models/');
+var Alcohol= require('../models/Alcohol');
 exports.Alcohol_list = function(req, res) {
 res.send('NOT IMPLEMENTED: Alcohol list');
 };
