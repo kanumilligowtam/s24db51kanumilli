@@ -2,7 +2,7 @@ var Alcohol= require('../models/');
 exports.Alcohol_list = function(req, res) {
 res.send('NOT IMPLEMENTED: Alcohol list');
 };
-// for a specific Dog.
+// for a specific Alcohol.
 exports.Alcohol_detail = function(req, res) {
 res.send('NOT IMPLEMENTED: Alcohol detail: ' + req.params.id);
 };
@@ -33,8 +33,8 @@ exports.Alcohol_list = async function(req, res) {
  
 exports.Alcohol_view_all_Page = async function(req, res) {
     try{
-    theAlcohols = await Alcohol.find();
-    res.render('Alcohol', { title: 'Alcohol Search Results', results: theAlcohols });
+    theAlcohol = await Alcohol.find();
+    res.render('Alcohol', { title: 'Alcohol Search Results', results: theAlcohol });
     }
     catch(err){
     res.status(500);

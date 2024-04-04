@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const DogSchema = mongoose.Schema({
+const AlcoholSchema = mongoose.Schema({
 Alcohol_type: String,
 Brand: String,
 Price: Number,

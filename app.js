@@ -66,7 +66,7 @@ async function recreateDB(){
   // Delete everything
   await Alcohol.deleteMany();
  
-  let instance1 = new Alcohol({Alcohol_type: 'Whisky', brand:'Oldmonk', price: 30});
+  let instance1 = new Alcohol({Alcohol_type: 'Whisky', Brand:'Oldmonk', Price: 30});
   instance1.save().then(doc=>{
   console.log("First object saved")}
   ).catch(err=>{
@@ -74,7 +74,7 @@ async function recreateDB(){
   });
  
  
-  let instance2 = new Alcohol({Alcohol_type: 'Rum', brand:'Bacardi', price: 20});
+  let instance2 = new Alcohol({Alcohol_type: 'Rum', Brand:'Bacardi', Price: 20});
   instance2.save().then(doc=>{
   console.log("Second object saved")}
   ).catch(err=>{
@@ -82,7 +82,7 @@ async function recreateDB(){
   });
  
  
-  let instance3 = new Alcohol({Alcohol_type: 'Vodka', brand:'Abolute', price: 220});
+  let instance3 = new Alcohol({Alcohol_type: 'Vodka', Brand:'Abolute', Price: 220});
   instance3.save().then(doc=>{
   console.log("Third object saved")}
   ).catch(err=>{
