@@ -1,0 +1,24 @@
+extends layout
+block content
+  h1= title
+ 
+  if toShow == null
+    h2 No instance to show
+  else
+    - let Alcoholid = toShow._id
+    - let Alcohol_type = toShow.Alcohol_type
+    - let brand = toShow.brand
+    - let price = toShow.price
+    div
+      div.row
+        div.AlcoholAttr.mr-3 Alcohol ID is:
+        div #{Alcoholid}
+      div.row
+        div.AlcoholAttr.mr-3 Alcohol Type is:
+        div #{Alcohol_type}
+      div.row
+        div.AlcoholAttr.mr-3 brand is:
+        div #{brand}
+      div.row
+        div.AlcoholAttr.mr-3 price is:
+        div #{price}

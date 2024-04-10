@@ -89,4 +89,29 @@ exports.Alcohol_create_post = async function(req, res) {
     res.send(`{"error": ${err}}`);
     }
     };
+    // Handle Alcohol delete on DELETE.
+exports.Alcohol_delete = async function(req, res) {
+    console.log("delete " + req.params.id)
+    try {
+    result = await Alcohol.findByIdAndDelete( req.params.id)
+    console.log("Removed " + result)
+    res.send(result)
+    } catch (err) {
+    res.status(500)
+    res.send(`{"error": Error deleting ${err}}`);
+    }
+    };
+
+    exports.Alcohol_view_one_Page = async function(req, res) {
+        console.log("single view for id " + req.query.id)
+        try{
+        result = await Alcohol.findById( req.query.id)
+        res.render('Alcoholdetail',
+        { title: 'Alcohol Detail', toShow: result });
+        }
+        catch(err){
+        res.status(500)
+        res.send(`{'error': '${err}'}`);
+        }
+        };
     
